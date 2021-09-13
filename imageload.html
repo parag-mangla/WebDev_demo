@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #imageid{
+            margin: 20px;
+            height: 200px;
+            width: 200px;
+            border: 2px solid red;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <!-- <form action=""">
+        <span>image link</span><input type="text" id="imglink">
+
+        <button type="submit" onclick="uploadPicture()">submit</button>
+
+        <div class="imagebox" id="imageid">
+            image
+        </div>
+    </form> -->
+
+
+
+<!-- <p><input type="text"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
+<p><label for="file" style="cursor: pointer;">Upload Image</label></p>
+<p><img id="output" width="200" /></p>
+
+<script>
+    function uploadPicture(){
+        var loadFile = document.getElementById('imglink').value;
+        alert(loadFile); 
+	    document.getElementById('imageid').src = URL.createObjectURL(loadFile);
+	    // image.src = URL.createObjectURL(loadFile);
+    }
+    
+
+</script> -->
+
+<p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
+<p><label for="file" style="cursor: pointer;">Upload Image</label></p>
+<p><img id="output" width="200" /></p>
+</body>
+<script>
+var loadFile = function(event) {
+	var image = document.getElementById('output');
+	image.src = URL.createObjectURL(event.target.files[0]);
+};
+</script>
+
+</html>
